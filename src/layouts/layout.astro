@@ -1,0 +1,26 @@
+---
+import { SEO } from "astro-seo";
+
+import "@/styles/global.css";
+
+interface Props {
+  description?: string;
+  title?: string;
+}
+
+const title = Astro.props.title || "Blank";
+const description = Astro.props.description || "A simple Astro starter kit";
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+    <SEO title={title} description={description} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

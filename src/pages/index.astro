@@ -1,0 +1,15 @@
+---
+import { Container } from "@/components/container";
+import Footer from "@/components/footer.astro";
+import Hero from "@/components/hero.astro";
+import { Resources } from "@/components/resouces";
+import Layout from "@/layouts/layout.astro";
+---
+
+<Layout>
+  <Container>
+    <Hero />
+    <main><Resources client:load /></main>
+    <Footer />
+  </Container>
+</Layout>
