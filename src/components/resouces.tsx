@@ -1,7 +1,7 @@
 import Fuse from "fuse.js";
 import { Search } from "lucide-react";
 import { useMemo, useState } from "react";
-import { type Resource, resources } from "./data/resources";
+import { type Resource, resources } from "@/data/resources";
 import { Badge } from "./ui/badge";
 import { Card, CardContent, CardFooter } from "./ui/card";
 import { InputGroup, InputGroupAddon, InputGroupInput } from "./ui/input-group";
