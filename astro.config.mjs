@@ -5,7 +5,7 @@ import { defineConfig } from "astro/config";
 import robotsTxt from "astro-robots-txt";
 
 export default defineConfig({
-  site: "https://eample.com",
+  site: "https://astrocurated.com",
   integrations: [react(), sitemap(), robotsTxt()],
   vite: {
     plugins: [tailwindcss()],
