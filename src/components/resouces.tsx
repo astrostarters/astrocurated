@@ -1,7 +1,7 @@
 import Fuse from "fuse.js";
 import { Search } from "lucide-react";
 import { useMemo, useState } from "react";
-import { type Resource, resources } from "@/data/resources";
+import { emojis, type Resource, resources } from "@/data/resources";
 import { Badge } from "./ui/badge";
 import { Card, CardContent, CardFooter } from "./ui/card";
 import { InputGroup, InputGroupAddon, InputGroupInput } from "./ui/input-group";
@@ -68,7 +68,9 @@ export function Resources() {
                   </p>
                 </CardContent>
                 <CardFooter className="flex justify-end">
-                  <Badge className="capitalize">{resource.type}</Badge>
+                  <Badge className="capitalize" variant="secondary">
+                    {emojis[resource.type]} {resource.type}
+                  </Badge>
                 </CardFooter>
               </Card>
             </a>

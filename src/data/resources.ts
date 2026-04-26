@@ -1,12 +1,21 @@
 import { reverseArray } from "../helpers/array";
 
+type Type = "article" | "integration" | "video" | "theme";
+
 export interface Resource {
   date: string; // YYYY-MM-DD
   description: string;
   title: string;
-  type: "article" | "integration" | "video" | "theme";
+  type: Type;
   url: string;
 }
+
+export const emojis: Record<Type, string> = {
+  article: "📖",
+  integration: "⚙️",
+  video: "🍿",
+  theme: "🦚",
+};
 
 const _resources: Resource[] = [
   {
